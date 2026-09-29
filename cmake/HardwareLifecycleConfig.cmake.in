@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+
+# Hardware Lifecycle - CMake package configuration.
+#
+# Copyright 2026 Summon Software Labs.
+# Licensed under the Apache License, Version 2.0.
+
+include(CMakeFindDependencyMacro)
+
+include("${CMAKE_CURRENT_LIST_DIR}/HardwareLifecycleTargets.cmake")
+
+check_required_components(HardwareLifecycle)
+
+set(HardwareLifecycle_LIBRARY HardwareLifecycle::hardware_lifecycle)

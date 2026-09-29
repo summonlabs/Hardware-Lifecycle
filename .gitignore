@@ -1,0 +1,44 @@
+# Build trees
+build/
+build-*/
+out/
+cmake-build-*/
+
+# CMake and CTest leftovers
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+CTestTestfile.cmake
+cmake_install.cmake
+install_manifest.txt
+Testing/
+_deps/
+
+# Compiler output
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.gcda
+*.gcno
+*.dSYM/
+
+# Stores written by the tools and examples while working locally
+hardware-lifecycle-store/
+*.hlj
+*.hlb
+
+# Editors
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*~

@@ -1,7 +1,6 @@
 # Hardware Lifecycle
 
-The canonical lifecycle state machine runtime for physical facility hardware in
-the Summon Software Labs Data Center Control Plane (DCCP).
+The canonical lifecycle state machine runtime for physical facility hardware.
 
 Hardware Lifecycle answers one question:
 

@@ -86,7 +86,11 @@ function(hl_configure_target target)
 
   if(HL_SANITIZERS)
     if(MSVC)
-      target_compile_options(${target} PRIVATE /fsanitize=address)
+      # /Zi and /DEBUG keep the debug information of the sanitizer objects
+      # (C5072 and LNK4302 without them), and sanitizer objects cannot be linked
+      # incrementally (LNK4300).
+      target_compile_options(${target} PRIVATE /fsanitize=address /Zi)
+      target_link_options(${target} PRIVATE /INCREMENTAL:NO /DEBUG)
     else()
       target_compile_options(${target} PRIVATE -fsanitize=address,undefined -fno-omit-frame-pointer)
       target_link_options(${target} PRIVATE -fsanitize=address,undefined)
